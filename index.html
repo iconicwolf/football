@@ -9,33 +9,30 @@
 <body>
     <!-- semantic web tags -->
     <!-- Navigation part is done -->
-   <nav>
-<ul>
-    <li><img src="./assets/prograd-logo.png" alt=""></li>
-    <li>
+    <nav class="navcol">
         <ul>
-            <li><a href="#teams">TEAMS</a> </li>
-            <li><a href="#fixtures"> FIXTURES</a></li>
-            <li><a href="#gameplay">GAME PLAY</a> </li>
-            <li><a href="#points">POINTS TABLE</a> </li>
+            <li class="logo-text">
+                <img class = "logo-img" src="./assets/prograd-logo.png" alt=""/> </li>
+            <li>
+                <ul>
+                    <li><a href="#teams" class="nav-link">TEAMS</a></li>
+                    <li><a href="#fixtures" class="nav-link">FIXTURES</a></li>
+                    <li><a href="./game.html" class="nav-link">GAME PLAY</a></li>
+                    <li><a href="#pointstable" class="nav-link">POINTS TABLE</a></li>
+                </ul>
+            </li>
         </ul>
-    </li>
-</ul>
-   </nav>
-   <header id="#teams">
-       <div>
+    </nav>
+    <hr>
+   <header id="#teams" >
+       <div class="flex">
         <article>
-            <img src="./assets/barca.pnglt=""/>
-            <h4> Barcalona</h4>
-            <p>Wins - 6 Loses - 4</p>
+            <img src="./assets/barca.png" alt=""/>
+            <h4> Barcalona</h4> 
         </article>
         <article>
             <img src="./assets/chelsea.png" alt=""/>
-<<<<<<< HEAD
             <h4> Chelsea</h4>
-=======
-            <h4> chelsea</h4>
->>>>>>> d511a775a28c4477be4c753a20857a8df53d4de2
         </article>
         <article>
             <img src="./assets/juventes.png" alt=""/>
@@ -56,9 +53,76 @@
        </div>
 
    </header>
-
+   <hr> 
+   <section id="fixtures">
+        
+    <div class="flex container-fix">
+        <a name="schedule"></a>
+        <div class="flex qualifier">
+            <div class="flex set ">
+                <div class="card1">
+                    <img class="csk-img" src="./assets/barca.png" alt="CSK">
+                </div>
+                <h3>VS</h3>
+                <div class="card1 ">
+                    <img class="kkr-img" src="./assets/chelsea.png" alt="KKR">
+                </div>
+            </div>
+            <div class="flex set">
+                <div class="card1">
+                    <img class="csk-img" src="./assets/liverpool.jpg" alt="CSK">
+                </div>
+                <h3>VS</h3>
+                <div class="card1 ">
+                    <img class="kkr-img" src="./assets/juventes.png" alt="KKR">
+                </div>
+            </div>
+            <div class="flex set ">
+                <div class="card1">
+                    <img class="csk-img" src="./assets/manU.png" alt="CSK">
+                </div>
+                <h3>VS</h3>
+                <div class="card1 ">
+                    <img class="kkr-img" src="./assets/realMardrid.png" alt="KKR">
+                </div>
+            </div>
+        </div>
+        <div class="flex semiFinal">
+            <div class="flex set ">
+                <div class="card1">
+                    <img class="csk-img" src="./assets/juventes.png" alt="CSK">
+                </div>
+                <h3>VS</h3>
+                <div class="card1">
+                    <img class="kxi-img" src="./assets/liverpool.jpg" alt="KXI">
+                </div>
+            </div>
+            <div class="flex set ">
+                <div class="card1">
+                    <img class="csk-img" src="./assets/realMardrid.png" alt="CSK">
+                </div>
+                <h3>VS</h3>
+                <div class="card1">
+                    <img class="kxi-img" src="./assets/manU.png" alt="KXI">
+                </div>
+            </div>
+       </div>
+        <div class="flex final">
+            <div class="flex set">
+                <div class="card1">
+                    <img class="csk-img" src="./assets/manU.png" alt="CSK">
+                </div>
+                <h3>VS</h3>
+                <div class="card1">
+                    <img class="mi-img" src="./assets/realMardrid.png" alt="MI">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
    <section id="#gameplay">
-    <div>
+    <div class="flex">
         <div>
             <div>
                 <img src="./assets/realMardrid.png" alt="">
@@ -89,8 +153,8 @@
         </div>
     </div>
    </section>
-   <footer>
-       Happy Coding ProGrads
+   <footer class="footer">
+       La Liga
    </footer>
 </body>
 </html>
