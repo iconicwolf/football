@@ -82,3 +82,17 @@ body {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+.rdot {
+	height: 25px;
+	width: 25px;
+	background-color: red;
+	border-radius: 50%;
+	display: inline-block;
+  }
+  .gdot {
+	height: 25px;
+	width: 25px;
+	background-color: green;
+	border-radius: 50%;
+	display: inline-block;
+  }

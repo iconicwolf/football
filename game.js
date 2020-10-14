@@ -1,15 +1,13 @@
-var score = [0,1,2,3,4,5,6];
+var score = [0,1];
 
 var team1={
-    //Team1 details
-    name: "CSK",
+    name: "Real Madrid",
     runs: [],
     score:0
 }
 
 var team2={
-    //Team2 details
-    name: "Mumbai Indians",
+    name: "Manchester United",
     runs: [],
     score:0
 }
@@ -29,10 +27,7 @@ window.onload = () =>{
     updateScore();
 }
 
-// function selectToss(){
-//     toss = Math.round(Math.random())+1;
-//     console.log(toss);
-// }
+
 // Function for deciding the toss
 var selectToss = () =>{
     toss = Math.round(Math.random())+1;
@@ -48,7 +43,6 @@ var updateButtonText = () =>{
     // check if game is over
     if(team1.runs.length == 6 && team2.runs.length == 6){
         button.remove();
-        // check if the match is draw Don't forget to use backticks ` ` and $ while calculating
         result.textContent = team1.score === team2.score ? `Its a draw`: `${team1.score > team2.score? team1.name:team2.name} Wins`;
     }
     else{
@@ -57,7 +51,7 @@ var updateButtonText = () =>{
     }
 
 
-    button.textContent = `${toss === 1 ? team1.name:team2.name} Batting`;
+    button.textContent = `${toss === 1 ? team1.name:team2.name} Shooting`;
 };
 
 // Function to update the teams name that are playing
@@ -80,7 +74,7 @@ var handleStrikeButtonClick = () =>{
  var runs = score[Math.floor(Math.random()*score.length)];
  console.log(runs);
 
- runs = runs === 5?"W": runs; // if run is 5 we mark it as a wicket
+//  runs = runs === 5?"W": runs; // if run is 5 we mark it as a wicket
  console.log(runs);
 
  // check which team is on strike
@@ -105,7 +99,7 @@ console.log("Calculate score method");
 
 return runs.map(num =>{
     
-return num =='W'? 0: num;
+return num == 0 ? 0 : num;
 
 }).reduce((total,num) => total + num
 
@@ -117,12 +111,36 @@ return num =='W'? 0: num;
 
 var updateRuns = () =>{
     var teamOneRunsElement = document.getElementById("team-1-round-runs").children;
+    var rmygoal = document.getElementById("rmygoal");
+    var gmygoal = document.getElementById("gmygoal");
     var teamTwoRunsElement = document.getElementById("team-2-round-runs").children;
     // update runs on score board
     team1.runs.forEach((run,index)=>{
-        teamOneRunsElement[index].textContent = run;
+        // teamOneRunsElement[index].textContent = run;
+        // run == 1 ? teamOneRunsElement[index].classList.add("gdot") : teamOneRunsElement[index].classList.add("rdot");
+        if(run==1)
+        {
+            teamOneRunsElement[index].textContent=" ";
+            teamOneRunsElement[index].classList.add("gdot");
+        }
+        else{
+            teamOneRunsElement[index].textContent=" ";
+            teamOneRunsElement[index].classList.add("rdot");           
+        }
     });
     team2.runs.forEach((run,index)=>{
-        teamTwoRunsElement[index].textContent = run;
+        // teamTwoRunsElement[index].textContent = run;
+        // run == 1 ? teamTwoRunsElement[index].classList.add("gdot") : teamTwoRunsElement[index].classList.add("rdot");
+        if(run==1)
+        {
+            // teamTwoRunsElement[index].textContent=" ";
+            teamTwoRunsElement[index].innerHTML=" ";
+            teamTwoRunsElement[index].classList.add("gdot");
+        }
+        else{
+            // teamTwoRunsElement[index].textContent=" ";
+            teamTwoRunsElement[index].innerHTML=" ";
+            teamTwoRunsElement[index].classList.add("rdot");           
+        }
     });
 };
